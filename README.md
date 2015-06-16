@@ -1,7 +1,8 @@
 # neandercs
 compilador / simulador de assembly para arquitetura NEANDER
-
-Uso: neander.py [opcoes] -f arquivo.asm / -
+===========================================================
+```
+Uso: neandercs.py [opcoes] -f arquivo.asm / -
 
 Compilador e simulador de assembly para arquitetura NEANDER. Usado na
 disciplina de Arquitetura de Computadores no IFCE.
@@ -13,3 +14,13 @@ Options:
   -f ARQUIVO, --file=ARQUIVO
                         Arquivo contendo assembly neander. Use - para
                         redirecionar por pipe/stdin.
+
+Exemplos:
+
+$ python neandercs.py teste.asm
+
+ou
+
+$ echo -e 'LDI 13\nSTA 50\nLDI 20\nSTA 51\nLDI 7\nSTA 52\nLDA 52\nADD 50\nADD 51\nSTA 53\nHLT\n' | python neandercs.py -f -
+
+```
