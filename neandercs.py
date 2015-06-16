@@ -244,10 +244,10 @@ def _hexdump():
 from optparse import OptionParser
 import sys
 desc='Compilador e simulador de assembly para arquitetura NEANDER. Usado na disciplina de Arquitetura de Computadores no IFCE.'
-uso='uso: %prog [opcoes] arquivo.asm'
+uso='%prog [opcoes] arquivo.asm / -'
 parser = OptionParser(usage=uso, version="%prog IFCE-0.3-alpha", description=desc)
-parser.add_option('-d', '--debug', action='store_true', dest='debug', help='habilita o modo de depuracao')
-parser.add_option('-f', '--file', dest='arquivo', help='arquivo contendo assembly neander. Use - para redirecionar por pipe.')
+parser.add_option('-d', '--debug', action='store_true', dest='debug', help='Habilita o modo de depuracao')
+parser.add_option('-f', '--file', dest='arquivo', help='Arquivo contendo assembly neander. Use - para redirecionar por pipe/usar stdin.')
 
 (opts,args)=parser.parse_args()
 
